@@ -15,6 +15,7 @@
 		C65C955C29276D8F00B119AD /* FavouriteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C955B29276D8F00B119AD /* FavouriteListVC.swift */; };
 		C65C955E2927735000B119AD /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C955D2927735000B119AD /* GFButton.swift */; };
 		C65C95602927758900B119AD /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C955F2927758900B119AD /* GFTextField.swift */; };
+		C65C95622927BA7C00B119AD /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C95612927BA7C00B119AD /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C65C955B29276D8F00B119AD /* FavouriteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListVC.swift; sourceTree = "<group>"; };
 		C65C955D2927735000B119AD /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		C65C955F2927758900B119AD /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		C65C95612927BA7C00B119AD /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				C65C95452927687500B119AD /* AppDelegate.swift */,
 				C65C95472927687500B119AD /* SceneDelegate.swift */,
+				C65C95612927BA7C00B119AD /* FollowerListVC.swift */,
 				C65C955929276D6A00B119AD /* SearchVC.swift */,
 				C65C955D2927735000B119AD /* GFButton.swift */,
 				C65C955F2927758900B119AD /* GFTextField.swift */,
@@ -147,6 +150,7 @@
 				C65C955A29276D6A00B119AD /* SearchVC.swift in Sources */,
 				C65C955E2927735000B119AD /* GFButton.swift in Sources */,
 				C65C95462927687500B119AD /* AppDelegate.swift in Sources */,
+				C65C95622927BA7C00B119AD /* FollowerListVC.swift in Sources */,
 				C65C955C29276D8F00B119AD /* FavouriteListVC.swift in Sources */,
 				C65C95482927687500B119AD /* SceneDelegate.swift in Sources */,
 			);
