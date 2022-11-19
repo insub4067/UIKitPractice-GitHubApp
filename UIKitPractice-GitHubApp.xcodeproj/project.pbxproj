@@ -70,22 +70,54 @@
 		C65C95442927687500B119AD /* UIKitPractice-GitHubApp */ = {
 			isa = PBXGroup;
 			children = (
+				C65C956D2928704500B119AD /* Extensions */,
+				C65C956C2928701C00B119AD /* Custom Views */,
+				C65C956B29286FF700B119AD /* Screens */,
+				C65C956E2928706800B119AD /* Support */,
+			);
+			path = "UIKitPractice-GitHubApp";
+			sourceTree = "<group>";
+		};
+		C65C956B29286FF700B119AD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C65C955929276D6A00B119AD /* SearchVC.swift */,
+				C65C95612927BA7C00B119AD /* FollowerListVC.swift */,
+				C65C955B29276D8F00B119AD /* FavouriteListVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C65C956C2928701C00B119AD /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C65C95672927E03A00B119AD /* GFAlertVC.swift */,
+				C65C955F2927758900B119AD /* GFTextField.swift */,
+				C65C95652927DF8600B119AD /* GFBodyLabel.swift */,
+				C65C95632927DE2900B119AD /* GFTitleLabel.swift */,
+				C65C955D2927735000B119AD /* GFButton.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		C65C956D2928704500B119AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C65C956929286AD200B119AD /* UIViewController+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C65C956E2928706800B119AD /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				C65C95452927687500B119AD /* AppDelegate.swift */,
 				C65C95472927687500B119AD /* SceneDelegate.swift */,
-				C65C95612927BA7C00B119AD /* FollowerListVC.swift */,
-				C65C955929276D6A00B119AD /* SearchVC.swift */,
-				C65C956929286AD200B119AD /* UIViewController+.swift */,
-				C65C955D2927735000B119AD /* GFButton.swift */,
-				C65C95632927DE2900B119AD /* GFTitleLabel.swift */,
-				C65C95672927E03A00B119AD /* GFAlertVC.swift */,
-				C65C95652927DF8600B119AD /* GFBodyLabel.swift */,
-				C65C955F2927758900B119AD /* GFTextField.swift */,
-				C65C955B29276D8F00B119AD /* FavouriteListVC.swift */,
 				C65C954E2927687600B119AD /* Assets.xcassets */,
 				C65C95502927687600B119AD /* LaunchScreen.storyboard */,
 				C65C95532927687600B119AD /* Info.plist */,
 			);
-			path = "UIKitPractice-GitHubApp";
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
