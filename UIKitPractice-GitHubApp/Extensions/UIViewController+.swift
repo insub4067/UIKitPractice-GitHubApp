@@ -18,7 +18,3 @@ extension UIViewController {
         }
     }
 }
-
-
-//            alertVC.modalPresentationStyle = .overFullScreen
-//            alertVC.modalTransitionStyle = .crossDissolve
