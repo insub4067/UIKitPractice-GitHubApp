@@ -26,6 +26,7 @@
 		C6B601C2292B328900A05BCC /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601C1292B328900A05BCC /* ErrorMessage.swift */; };
 		C6B601C5292B6A0E00A05BCC /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601C4292B6A0E00A05BCC /* FollowerCell.swift */; };
 		C6B601C7292B6A7700A05BCC /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601C6292B6A7700A05BCC /* GFAvatarImageView.swift */; };
+		C6B601C9292C2CF000A05BCC /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601C8292C2CF000A05BCC /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C6B601C1292B328900A05BCC /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		C6B601C4292B6A0E00A05BCC /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		C6B601C6292B6A7700A05BCC /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		C6B601C8292C2CF000A05BCC /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B601C1292B328900A05BCC /* ErrorMessage.swift */,
+				C6B601C8292C2CF000A05BCC /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				C65C955A29276D6A00B119AD /* SearchVC.swift in Sources */,
 				C65C955E2927735000B119AD /* GFButton.swift in Sources */,
 				C65C95462927687500B119AD /* AppDelegate.swift in Sources */,
+				C6B601C9292C2CF000A05BCC /* UIHelper.swift in Sources */,
 				C6B601C7292B6A7700A05BCC /* GFAvatarImageView.swift in Sources */,
 				C65C95682927E03A00B119AD /* GFAlertVC.swift in Sources */,
 				C65C95662927DF8600B119AD /* GFBodyLabel.swift in Sources */,
