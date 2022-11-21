@@ -70,6 +70,7 @@
 		C65C95442927687500B119AD /* UIKitPractice-GitHubApp */ = {
 			isa = PBXGroup;
 			children = (
+				C65C95532927687600B119AD /* Info.plist */,
 				C65C956D2928704500B119AD /* Extensions */,
 				C65C956C2928701C00B119AD /* Custom Views */,
 				C65C956B29286FF700B119AD /* Screens */,
@@ -111,11 +112,10 @@
 		C65C956E2928706800B119AD /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				C65C954E2927687600B119AD /* Assets.xcassets */,
 				C65C95452927687500B119AD /* AppDelegate.swift */,
 				C65C95472927687500B119AD /* SceneDelegate.swift */,
-				C65C954E2927687600B119AD /* Assets.xcassets */,
 				C65C95502927687600B119AD /* LaunchScreen.storyboard */,
-				C65C95532927687600B119AD /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
