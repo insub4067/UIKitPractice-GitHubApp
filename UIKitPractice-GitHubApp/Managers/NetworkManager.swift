@@ -16,9 +16,9 @@ class NetworkManager {
 
     func getFollowers(for username: String, page: Int, completion: @escaping (Result<[Follower], GFError>) -> Void) {
 
-        let username = "insub4067"
+        let user = "insub4067"
         let token = "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"
-        let loginString = String(format: "%@:%@", username, token)
+        let loginString = String(format: "%@:%@", user, token)
         let loginData = loginString.data(using: String.Encoding.utf8)
 
         guard let loginData = loginData else { return }
