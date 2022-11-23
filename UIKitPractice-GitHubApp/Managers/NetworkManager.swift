@@ -15,6 +15,15 @@ class NetworkManager {
     private init() {}
 
     func getFollowers(for username: String, page: Int, completion: @escaping (Result<[Follower], GFError>) -> Void) {
+        let user = "insub4067"
+        let token = "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"
+        let loginString = String(format: "%@:%@", user, token)
+        let loginData = loginString.data(using: String.Encoding.utf8)
+
+        guard let loginData = loginData else { return }
+
+        let base64LoginString = loginData.base64EncodedString()
+
         let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
 
         guard let url = URL(string: endpoint) else {
@@ -22,7 +31,10 @@ class NetworkManager {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        request.addValue(base64LoginString, forHTTPHeaderField: "Authorization")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let _ = error {
                 completion(.failure(.unableToComplete))
             }
@@ -47,6 +59,15 @@ class NetworkManager {
     }
 
     func getFollowerInfo(for username: String, completion: @escaping (Result<User, GFError>) -> Void) {
+        let user = "insub4067"
+        let token = "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"
+        let loginString = String(format: "%@:%@", user, token)
+        let loginData = loginString.data(using: String.Encoding.utf8)
+
+        guard let loginData = loginData else { return }
+
+        let base64LoginString = loginData.base64EncodedString()
+
         let endpoint = baseURL + "\(username)"
 
         guard let url = URL(string: endpoint) else {
@@ -54,7 +75,10 @@ class NetworkManager {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        request.addValue(base64LoginString, forHTTPHeaderField: "Authorization")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let _ = error {
                 completion(.failure(.unableToComplete))
             }
