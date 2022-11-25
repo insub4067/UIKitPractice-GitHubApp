@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6145A51293162BB00BC29EE /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A50293162BB00BC29EE /* GFItemInfoView.swift */; };
 		C65C95462927687500B119AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C95452927687500B119AD /* AppDelegate.swift */; };
 		C65C95482927687500B119AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C95472927687500B119AD /* SceneDelegate.swift */; };
 		C65C954F2927687600B119AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65C954E2927687600B119AD /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C6145A50293162BB00BC29EE /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		C65C95422927687500B119AD /* UIKitPractice-GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitPractice-GitHubApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65C95452927687500B119AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C65C95472927687500B119AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B601D1292CEA3B00A05BCC /* GFEmptyStateView.swift */,
+				C6145A50293162BB00BC29EE /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				C6B601C7292B6A7700A05BCC /* GFAvatarImageView.swift in Sources */,
 				C65C95682927E03A00B119AD /* GFAlertVC.swift in Sources */,
 				C65C95662927DF8600B119AD /* GFBodyLabel.swift in Sources */,
+				C6145A51293162BB00BC29EE /* GFItemInfoView.swift in Sources */,
 				C6B601C5292B6A0E00A05BCC /* FollowerCell.swift in Sources */,
 				C6B601C2292B328900A05BCC /* ErrorMessage.swift in Sources */,
 				C6B601DA2930545B00A05BCC /* GFUserInfoHeaderVC.swift in Sources */,
