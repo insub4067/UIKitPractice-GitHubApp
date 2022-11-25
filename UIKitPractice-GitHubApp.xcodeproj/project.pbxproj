@@ -29,6 +29,7 @@
 		C6B601C9292C2CF000A05BCC /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601C8292C2CF000A05BCC /* UIHelper.swift */; };
 		C6B601D2292CEA3B00A05BCC /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601D1292CEA3B00A05BCC /* GFEmptyStateView.swift */; };
 		C6B601D4292DC6EA00A05BCC /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601D3292DC6EA00A05BCC /* UserInfoVC.swift */; };
+		C6B601DA2930545B00A05BCC /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B601D92930545B00A05BCC /* GFUserInfoHeaderVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		C6B601C8292C2CF000A05BCC /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		C6B601D1292CEA3B00A05BCC /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		C6B601D3292DC6EA00A05BCC /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		C6B601D92930545B00A05BCC /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				C65C95672927E03A00B119AD /* GFAlertVC.swift */,
+				C6B601D92930545B00A05BCC /* GFUserInfoHeaderVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				C65C95662927DF8600B119AD /* GFBodyLabel.swift in Sources */,
 				C6B601C5292B6A0E00A05BCC /* FollowerCell.swift in Sources */,
 				C6B601C2292B328900A05BCC /* ErrorMessage.swift in Sources */,
+				C6B601DA2930545B00A05BCC /* GFUserInfoHeaderVC.swift in Sources */,
 				C65C95622927BA7C00B119AD /* FollowerListVC.swift in Sources */,
 				C6B601B9292B05F000A05BCC /* Follower.swift in Sources */,
 				C65C955C29276D8F00B119AD /* FavouriteListVC.swift in Sources */,
