@@ -8,13 +8,13 @@
 import UIKit
 
 class UserInfoVC: UIViewController {
-
     let headerView = UIView()
 
     var username: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton

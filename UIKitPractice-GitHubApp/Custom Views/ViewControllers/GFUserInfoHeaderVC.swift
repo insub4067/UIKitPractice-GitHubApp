@@ -8,7 +8,6 @@
 import UIKit
 
 class GFUserInfoHeaderVC: UIViewController {
-
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAlignment: .left, fontSize: 34)
     let nameLabel = GFSecondaryTitleLabel(fontSize: 18)
@@ -34,18 +33,6 @@ class GFUserInfoHeaderVC: UIViewController {
         configureUIElements()
     }
 
-    func configureUIElements() {
-        avatarImageView.downloadImage(from: user.avatarUrl)
-        usernameLabel.text = user.login
-        nameLabel.text = user.name ?? ""
-        locationLabel.text = user.location ?? "No Location"
-        bioLabel.text = user.bio ?? "No bio available"
-        bioLabel.numberOfLines = 3
-
-        locationImageView.image = UIImage(systemName: SFSymbols.location)
-        locationImageView.tintColor = .secondaryLabel
-    }
-
     func addSubViews() {
         view.addSubview(avatarImageView)
         view.addSubview(usernameLabel)
@@ -61,7 +48,7 @@ class GFUserInfoHeaderVC: UIViewController {
         locationImageView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
+            avatarImageView.topAnchor.constraint(equalTo: view.topAnchor),
             avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             avatarImageView.widthAnchor.constraint(equalToConstant: 90),
             avatarImageView.heightAnchor.constraint(equalToConstant: 90),
@@ -91,5 +78,17 @@ class GFUserInfoHeaderVC: UIViewController {
             bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             bioLabel.heightAnchor.constraint(equalToConstant: 60)
         ])
+    }
+
+    func configureUIElements() {
+        avatarImageView.downloadImage(from: user.avatarUrl)
+        usernameLabel.text = user.login
+        nameLabel.text = user.name ?? ""
+        locationLabel.text = user.location ?? "No Location"
+        bioLabel.text = user.bio ?? "No bio available"
+        bioLabel.numberOfLines = 3
+
+        locationImageView.image = UIImage(systemName: SFSymbols.location)
+        locationImageView.tintColor = .secondaryLabel
     }
 }

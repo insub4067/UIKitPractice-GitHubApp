@@ -41,7 +41,7 @@ extension UIViewController {
         activityIndicator.startAnimating()
     }
 
-    func dissmissLoadingView() {
+    func dismissLoadingView() {
         DispatchQueue.main.async {
             containerView.removeFromSuperview()
             containerView = nil
