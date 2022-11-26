@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct UIHelper {
+enum UIHelper {
     static func createThreeColumnFlowLayout(in superView: UIView) -> UICollectionViewFlowLayout {
         let width = superView.frame.width
         let padding: CGFloat = 12
