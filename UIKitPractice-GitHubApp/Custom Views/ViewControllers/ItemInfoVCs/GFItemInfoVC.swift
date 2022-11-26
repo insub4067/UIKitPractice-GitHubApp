@@ -19,8 +19,8 @@ class GFItemInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackgroundView()
-        layoutUI()
         configureStackView()
+        layoutUI()
     }
 
     init(user: User!) {
@@ -34,7 +34,7 @@ class GFItemInfoVC: UIViewController {
     
     private func configureBackgroundView() {
         view.layer.cornerRadius = 18
-        view.backgroundColor = .secondaryLabel
+        view.backgroundColor = .secondarySystemBackground
     }
 
     func configureStackView() {
@@ -43,7 +43,6 @@ class GFItemInfoVC: UIViewController {
 
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
-
     }
 
     private func layoutUI() {
