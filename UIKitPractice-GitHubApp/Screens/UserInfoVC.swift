@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate: AnyObject {
+    func didTapGitHubProfile()
+    func didTapGetFollowers()
+}
+
 class UserInfoVC: UIViewController {
     let headerView = UIView()
     let itemViewOne = UIView()
@@ -66,16 +71,24 @@ class UserInfoVC: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let user):
-                DispatchQueue.main.async {
-                    self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-                    self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
-                    self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
-                    self.dateLabel.text = "GitHub Since \(user.createdAt.converToDisplayFormat())"
-                }
+                DispatchQueue.main.async { self.configureUIElements(with: user) }
             case .failure(let error):
                 self.presentAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
+    }
+
+    func configureUIElements(with user: User) {
+        let repoItemVC = GFRepoItemVC(user: user)
+        repoItemVC.delegate = self
+
+        let followerItemVC = GFFollowerItemVC(user: user)
+        followerItemVC.delegate = self
+
+        self.add(childVC: GFUserInfoHeaderVC(user: user), to: headerView)
+        self.add(childVC: repoItemVC, to: itemViewOne)
+        self.add(childVC: followerItemVC, to: itemViewTwo)
+        self.dateLabel.text = "GitHub Since \(user.createdAt.converToDisplayFormat())"
     }
 
     func add(childVC: UIViewController, to containerView: UIView) {
@@ -87,5 +100,15 @@ class UserInfoVC: UIViewController {
 
     @objc func dismissVC() {
         dismiss(animated: true)
+    }
+}
+
+extension UserInfoVC: UserInfoVCDelegate {
+    func didTapGitHubProfile() {
+        print("did tapped profile")
+    }
+
+    func didTapGetFollowers() {
+        print("did tapped followers")
     }
 }
