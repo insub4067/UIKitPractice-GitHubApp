@@ -19,7 +19,6 @@ class FavoriteListVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("VWA")
         super.viewWillAppear(animated)
         getFavorites()
     }
@@ -72,5 +71,14 @@ extension FavoriteListVC: UITableViewDelegate, UITableViewDataSource {
         let favorite = favorites[indexPath.row]
         cell.set(favorite: favorite)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let favorite = favorites[indexPath.row]
+        let destVC = FollowerListVC()
+        destVC.username = favorite.login
+        destVC.title = favorite.login
+
+        navigationController?.pushViewController(destVC, animated: true)
     }
 }
