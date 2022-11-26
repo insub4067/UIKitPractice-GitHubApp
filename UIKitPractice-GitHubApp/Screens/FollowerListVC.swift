@@ -41,6 +41,8 @@ class FollowerListVC: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
 
     func configureCollectionView() {
@@ -96,6 +98,28 @@ class FollowerListVC: UIViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.dataSource.apply(snapshot, animatingDifferences: true)
+        }
+    }
+
+    @objc func addButtonTapped() {
+        showLoadingView()
+        NetworkManager.shared.getFollowerInfo(for: username) { [weak self] result in
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    guard let self = self else { return }
+                    guard let error = error else {
+                        self.presentAlertOnMainThread(title: "Success", message: "Successfully added user", buttonTitle: "Ok")
+                        return
+                    }
+                    self.presentAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
+                }
+            case .failure(let error):
+                self.presentAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
+            }
         }
     }
 }

@@ -7,24 +7,28 @@
 
 import UIKit
 
+fileprivate enum Keys {
+    static let baseURL = "https://api.github.com/users/"
+    static let user = "insub4067"
+    static let token = "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"
+}
+
 class NetworkManager {
     static let shared = NetworkManager()
-    private let baseURL = "https://api.github.com/users/"
     let cache = NSCache<NSString, UIImage>()
 
     private init() {}
 
     func getFollowers(for username: String, page: Int, completion: @escaping (Result<[Follower], GFError>) -> Void) {
-        let user = "insub4067"
-        let token = "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"
-        let loginString = String(format: "%@:%@", user, token)
+
+        let loginString = String(format: "%@:%@", Keys.user, Keys.token)
         let loginData = loginString.data(using: String.Encoding.utf8)
 
         guard let loginData = loginData else { return }
 
         let base64LoginString = loginData.base64EncodedString()
 
-        let endpoint = baseURL + "\(username)/followers?per_page=100&page=\(page)"
+        let endpoint = Keys.baseURL + "\(username)/followers?per_page=100&page=\(page)"
 
         guard let url = URL(string: endpoint) else {
             completion(.failure(.invalidUsername))
@@ -59,16 +63,15 @@ class NetworkManager {
     }
 
     func getFollowerInfo(for username: String, completion: @escaping (Result<User, GFError>) -> Void) {
-        let user = "insub4067"
-        let token = "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"
-        let loginString = String(format: "%@:%@", user, token)
+
+        let loginString = String(format: "%@:%@", Keys.user, Keys.token)
         let loginData = loginString.data(using: String.Encoding.utf8)
 
         guard let loginData = loginData else { return }
 
         let base64LoginString = loginData.base64EncodedString()
 
-        let endpoint = baseURL + "\(username)"
+        let endpoint = Keys.baseURL + "\(username)"
 
         guard let url = URL(string: endpoint) else {
             completion(.failure(.invalidUsername))
