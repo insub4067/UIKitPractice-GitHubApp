@@ -12,7 +12,6 @@
 		C6145A552931696D00BC29EE /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A542931696D00BC29EE /* GFRepoItemVC.swift */; };
 		C6145A5729318DFC00BC29EE /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A5629318DFC00BC29EE /* GFFollowerItemVC.swift */; };
 		C6145A5A29319ABE00BC29EE /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A5929319ABE00BC29EE /* Date+.swift */; };
-		C6145A5C29319AD800BC29EE /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A5B29319AD800BC29EE /* String+.swift */; };
 		C6145A5E2931D66200BC29EE /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A5D2931D66200BC29EE /* PersistenceManager.swift */; };
 		C6145A602931DFE200BC29EE /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A5F2931DFE200BC29EE /* FavoriteCell.swift */; };
 		C6145A632931F63000BC29EE /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6145A622931F63000BC29EE /* GFTabBarController.swift */; };
@@ -50,7 +49,6 @@
 		C6145A542931696D00BC29EE /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		C6145A5629318DFC00BC29EE /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		C6145A5929319ABE00BC29EE /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		C6145A5B29319AD800BC29EE /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		C6145A5D2931D66200BC29EE /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		C6145A5F2931DFE200BC29EE /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		C6145A622931F63000BC29EE /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 			children = (
 				C65C956929286AD200B119AD /* UIViewController+.swift */,
 				C6145A5929319ABE00BC29EE /* Date+.swift */,
-				C6145A5B29319AD800BC29EE /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,7 +378,6 @@
 				C6B601BE292B117700A05BCC /* NetworkManager.swift in Sources */,
 				C65C956A29286AD200B119AD /* UIViewController+.swift in Sources */,
 				C65C95482927687500B119AD /* SceneDelegate.swift in Sources */,
-				C6145A5C29319AD800BC29EE /* String+.swift in Sources */,
 				C65C95642927DE2900B119AD /* GFTitleLabel.swift in Sources */,
 				C6145A552931696D00BC29EE /* GFRepoItemVC.swift in Sources */,
 				C6B601D4292DC6EA00A05BCC /* UserInfoVC.swift in Sources */,
