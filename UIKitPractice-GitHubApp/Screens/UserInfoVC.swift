@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol UserInfoVCDelegate: AnyObject {
-    func didTapGitHubProfile()
-    func didTapGetFollowers()
+    func didTapGitHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
 }
 
 class UserInfoVC: UIViewController {
@@ -20,6 +21,7 @@ class UserInfoVC: UIViewController {
     var itemViews: [UIView] = []
 
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,11 +106,16 @@ class UserInfoVC: UIViewController {
 }
 
 extension UserInfoVC: UserInfoVCDelegate {
-    func didTapGitHubProfile() {
-        print("did tapped profile")
+    func didTapGitHubProfile(for user: User) {
+        guard let url = URL(string: user.htmlUrl) else { presentAlertOnMainThread(title: "Invalid URL", message: "This URL is not valid.", buttonTitle: "Ok")
+            return }
+        presentSafariVC(with: url)
     }
 
-    func didTapGetFollowers() {
-        print("did tapped followers")
+    func didTapGetFollowers(for user: User) {
+        guard user.followers != 0 else { presentAlertOnMainThread(title: "No Followers", message: "This user does not have any followers 😭", buttonTitle: "Ok")
+            return }
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
 }

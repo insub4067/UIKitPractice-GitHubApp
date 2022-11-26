@@ -15,7 +15,7 @@ class GFRepoItemVC: GFItemInfoVC {
     }
 
     override func didTapActionButton() {
-        delegate.didTapGitHubProfile()
+        delegate.didTapGitHubProfile(for: user)
     }
 
     private func configureItems() {
