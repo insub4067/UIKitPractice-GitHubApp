@@ -74,6 +74,7 @@ class FollowerListVC: GFDataLoadingVC {
 
     func getFollowers(username: String, page: Int) {
         showLoadingView()
+        isLoadingMoreFollowers = true
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
@@ -90,6 +91,7 @@ class FollowerListVC: GFDataLoadingVC {
             case .failure(let error):
                 self.presentAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
+            self.isLoadingMoreFollowers = false
         }
     }
 
@@ -113,7 +115,6 @@ class FollowerListVC: GFDataLoadingVC {
 
     @objc func addButtonTapped() {
         showLoadingView()
-        isLoadingMoreFollowers = true
         NetworkManager.shared.getFollowerInfo(for: username) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
@@ -131,7 +132,6 @@ class FollowerListVC: GFDataLoadingVC {
             case .failure(let error):
                 self.presentAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
             }
-            self.isLoadingMoreFollowers = false
         }
     }
 }
