@@ -96,7 +96,9 @@ class FollowerListVC: GFDataLoadingVC {
     }
 
     func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { collectionView, indexPath, follower in
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(
+            collectionView: collectionView,
+            cellProvider: { collectionView, indexPath, follower in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
             cell.set(follower: follower)
             return cell
